@@ -1,4 +1,4 @@
-%let project_name = GitWorkflow1;
+%let project_name = GitWorkflow2;
 %let project_path = c:\users\&SYSUSERID.\MySASProjects\&project_name;
 
 /* ODS printing of pdf file to output folder - 
@@ -8,7 +8,10 @@
    Yet another line added by this developer in git
    And another one, and another one!
 */
+ods listing;
 ods pdf file="&project_path\output\class.pdf";
+ods html5 file="&project_path\output\class.html";
+ods excel file="&project_path\output\class.xls";
 proc print data=sashelp.class;
 run;
-ods pdf close;
+ods _all_ close;
