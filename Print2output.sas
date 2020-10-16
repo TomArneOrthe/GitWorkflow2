@@ -12,6 +12,7 @@ ods listing;
 ods pdf file="&project_path\output\class.pdf";
 ods html5 file="&project_path\output\class.html";
 ods excel file="&project_path\output\class.xls";
+ods rtf file="&project_path\output\class.rtf";
 proc print data=sashelp.class;
 run;
 ods _all_ close;
